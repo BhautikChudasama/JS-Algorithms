@@ -6,6 +6,7 @@ class Node {
   }
 }
 
+// Time: O(n) | Space: O(n)
 function removeKthNode(head, n) {
     let dict = {};
 
