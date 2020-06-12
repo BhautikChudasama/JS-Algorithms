@@ -1,13 +1,20 @@
 
+// REMEMBER: How to traverse row such as
 
-function spriralTraverse(matrix) {
+// [0, 0, 1]
+// [0, 0, 2]
+// [0, 0, 3]
+//=============
+// => [1, 2, 3]
+
+// Time: O(n^2) | Space: O(1)
+function spriralTraverse(matrix, final) {
   let sc = 0, sr = 0;
   let ec = matrix[0].length-1;
   let er = matrix.length-1;
   let i = 0;
-  var final = [];
 
-  while(sc < ec || sr < er) {
+  while(sc < ec && sr < er) {
     i = sc;
     while(i <= ec) {
       final.push(matrix[sr][i]);
@@ -42,9 +49,11 @@ function spriralTraverse(matrix) {
 
 let matrix = [
   [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9,10,11,12]
+  [12, 13, 14, 5],
+  [11, 16, 15, 6],
+  [10, 9, 8, 7]
 ]
 
-let final = spriralTraverse(matrix);
+let final = []
+spriralTraverse(matrix);
 console.log(final);
