@@ -1,4 +1,6 @@
 
+// Asked by Amazon
+
 // Time: O(2N) => O(n) | Space: O(n);
 
 class Node {
